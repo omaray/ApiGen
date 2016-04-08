@@ -29,6 +29,7 @@ public class MarkdownManager {
 		scopes.put(Constants.API_OVERVIEW_URL, api.getOverviewUrl());
 		scopes.put(Constants.API_GETTING_STARTED_URL, api.getGettingStartedUrl());
 		scopes.put(Constants.API_EXPLORER_URL, api.getApiExplorerUrl());
+		scopes.put(Constants.API_HTTP_REFERENCE_URL, api.getHttpReferenceUrl());
 		
 		scopes.put(Constants.LANGUAGE_NAME, language.getName());
 		scopes.put(Constants.LANGUAGE_PACKAGE_MANAGER, language.getPackageManager());

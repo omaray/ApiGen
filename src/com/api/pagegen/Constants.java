@@ -14,6 +14,7 @@ public class Constants {
     public static final String API_OVERVIEW_URL = "apiOverviewUrl";
     public static final String API_GETTING_STARTED_URL = "apiGettingStartedUrl";
     public static final String API_EXPLORER_URL = "apiExplorerUrl";
+    public static final String API_HTTP_REFERENCE_URL = "apiHttpReferenceUrl";
     
     // Language related constants for markdown
     public static final String LANGUAGE_NAME = "languageName";

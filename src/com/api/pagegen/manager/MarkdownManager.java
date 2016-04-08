@@ -46,10 +46,10 @@ public class MarkdownManager {
 		scopes.put(Constants.CLIENT_LIB_GENERAL_API_REFERENCE_URL, clientLib.getGeneralApiReferenceUrl());
 		
 		MustacheFactory mf = new DefaultMustacheFactory();
-	    Mustache mustache = mf.compile(Constants.API_PAGE_TEMPLATE);
-	    
-	    String fileName = language.getName() + "_" + api.getName() + "_details_page.md";
-	    File file = new File("./out/" + language.getName() + "/" + fileName);
-	    mustache.execute(new PrintWriter(file), scopes).flush();
+		Mustache mustache = mf.compile(Constants.API_PAGE_TEMPLATE);
+		
+		String fileName = language.getName() + "_" + api.getName() + "_details_page.md";
+		File file = new File("./out/" + language.getName() + "/" + fileName);
+		mustache.execute(new PrintWriter(file), scopes).flush();
 	}
 }

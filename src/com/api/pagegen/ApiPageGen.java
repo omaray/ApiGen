@@ -1,30 +1,33 @@
 package com.api.pagegen;
 
 public class ApiPageGen {
+	private ApiManager apiManager;
+	private LanguageManager languageManager;
+	private ClientLibraryManager clientLibManager;
+	private MarkdownManager markdownManager;
+	
+	public ApiPageGen() {
+		this.apiManager = ApiManager.getInstance();
+		this.languageManager = LanguageManager.getInstance();
+		this.clientLibManager = ClientLibraryManager.getInstance();
+		this.markdownManager = MarkdownManager.getInstance();
+	}
+	
+	public void generateApiPages() throws Exception{
+		this.generateApiPagesHelper("Node.js");
+		this.generateApiPagesHelper("Python");
+	}
+	
+	private void generateApiPagesHelper(String languageName) throws Exception {
+		Language language = this.languageManager.getLanguageDefinition(languageName);
+		for (Api api : apiManager.getAllApiDefinitions()) {
+			ClientLibrary clientLib = clientLibManager.getClientLibrary(language.getName(), api.getName());
+			markdownManager.generateApiDetailsPage(language, api, clientLib);
+		}
+	}
 	
 	static public void main(String[] args) throws Exception {
-		
-		ApiManager apiManager = ApiManager.getInstance();
-		apiManager.printAllApiDefinitions();
-		
-		LanguageManager languageManager = LanguageManager.getInstance();
-		languageManager.printAllLanguageDefinitions();
-		
-		ClientLibraryManager clientLibManager = ClientLibraryManager.getInstance();
-		clientLibManager.printAllClientLibraryRawDefinitions();
-		clientLibManager.printAllClientLibraryDefinitions();
-		
-		MarkdownManager markdownManager = MarkdownManager.getInstance();
-		Language language = languageManager.getLanguageDefinition("Node.js");
-		for (Api api : apiManager.getAllApiDefinitions()) {
-			ClientLibrary clientLib = clientLibManager.getClientLibrary(language.getName(), api.getName());
-			markdownManager.generateApiDetailsPage(language, api, clientLib);
-		}
-		
-		language = languageManager.getLanguageDefinition("Python");
-		for (Api api : apiManager.getAllApiDefinitions()) {
-			ClientLibrary clientLib = clientLibManager.getClientLibrary(language.getName(), api.getName());
-			markdownManager.generateApiDetailsPage(language, api, clientLib);
-		}
+		ApiPageGen apiPageGen = new ApiPageGen();
+		apiPageGen.generateApiPages();
 	}
 }

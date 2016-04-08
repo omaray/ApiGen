@@ -1,0 +1,104 @@
+[
+	{
+		"name": "gcloud-node",
+		"language": "Node.js",
+		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-node",
+		"sampleUrl": "https://github.com/GoogleCloudPlatform/gcloud-node/tree/master/test",
+		"apiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-node/#/docs/",
+		"installation": "npm install --save gcloud",
+		"apis":
+		[
+			{
+				"name": "bigquery"
+			},
+			{
+				"name": "compute"
+			},
+			{
+				"name": "dns"
+			},
+			{
+				"name": "datastore"
+			},
+			{
+				"name": "logging"
+			},
+			{
+				"name": "pubsub"
+			},
+			{
+				"name": "cloudresourcemanager"
+			},
+			{
+				"name": "storage"
+			},
+			{
+				"name": "translate"
+			},
+			{
+				"name": "vision"
+			}
+		]
+	},
+	{
+		"name": "gcloud-python",
+		"language": "Python",
+		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-python",
+		"sampleUrl": "",
+		"apiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-python/stable/",
+		"installation": "pip install --upgrade gcloud",
+		"apis":
+		[
+			{
+				"name": "bigquery"
+			},
+			{
+				"name": "datastore"
+			},
+			{
+				"name": "dns"
+			},
+			{
+				"name": "logging"
+			},
+			{
+				"name": "pubsub"
+			},
+			{
+				"name": "resourcemanager"
+			},
+			{
+				"name": "search"
+			},
+			{
+				"name": "storage"
+			}
+		]
+	},
+	{
+		"name": "gcloud-java",
+		"language": "Java",
+		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-java",
+		"sampleUrl": "https://github.com/GoogleCloudPlatform/gcloud-java/tree/master/gcloud-java-examples",
+		"apiReferenceUrl": "http://googlecloudplatform.github.io/gcloud-java/apidocs",
+		"installation": "<dependency><groupId>com.google.gcloud</groupId><artifactId>gcloud-java</artifactId><version>0.1.7</version></dependency>",
+		"apis":
+		[
+			{
+				"name": "bigquery"
+			},
+			{
+				"name": "datastore"
+			},
+			{
+				"name": "dns"
+			},
+			{
+				"name": "resourcemanager"
+			},
+			{
+				"name": "storage"
+			}
+		]
+	}
+]

@@ -1,0 +1,101 @@
+[
+	{
+		"name": "bigquery",
+		"displayName": "BigQuery",
+		"description": "Querying massive datasets can be time consuming and expensive without the right hardware and infrastructure. Google BigQuery solves this problem by enabling super-fast SQL queries against append-only tables using the processing power of Google's infrastructure.",
+		"overviewUrl": "https://cloud.google.com/bigquery/what-is-bigquery",
+		"gettingStartedUrl": "https://cloud.google.com/bigquery/sign-up",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/bigquery/v2/",
+		"httpReferenceUrl": "https://cloud.google.com/bigquery/docs/reference/v2/"
+	},
+	{
+		"name": "compute",
+		"displayName": "Google Compute Engine",
+		"description": "Google Compute Engine lets you create and run virtual machines on Google infrastructure.",
+		"overviewUrl": "https://cloud.google.com/compute/docs/",
+		"gettingStartedUrl": "https://cloud.google.com/compute/docs/linux-quickstart",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/compute/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/compute/docs/reference/latest/"
+	},
+	{
+		"name": "dns",
+		"displayName": "Google Cloud DNS",
+		"description": "Publish your domain names using Google's infrastructure for production-quality, high-volume DNS services.",
+		"overviewUrl": "https://cloud.google.com/dns/docs",
+		"gettingStartedUrl": "https://cloud.google.com/dns/getting-started",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/dns/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/dns/api/v1/"
+	},
+	{
+		"name": "datastore",
+		"displayName": "Google Cloud Datastore",
+		"description": "Google Cloud Datastore is a NoSQL document database built for automatic scaling, high performance, and ease of application development.",
+		"overviewUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
+		"gettingStartedUrl": "https://cloud.google.com/datastore/docs/quickstart",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/datastore/v1beta3/",
+		"httpReferenceUrl": "https://cloud.google.com/datastore/docs/apis/overview"
+	},
+	{
+		"name": "dataproc",
+		"displayName": "Google Cloud Dataproc",
+		"description": "Cloud Dataproc is a managed Spark and Hadoop service that lets you take advantage of open source data tools for batch processing, querying, streaming, and machine learning.",
+		"overviewUrl": "https://cloud.google.com/dataproc/overview",
+		"gettingStartedUrl": "https://cloud.google.com/dataproc/setup-project",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/dataproc/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/dataproc/reference/rest/"
+	},
+	{
+		"name": "logging",
+		"displayName": "Stackdriver Logging",
+		"description": "Stackdriver Logging collects and stores logs from applications and services in Google Cloud Platform (GCP) and Amazon Web Services (AWS).",
+		"overviewUrl": "https://cloud.google.com/logging/docs/",
+		"gettingStartedUrl": "https://cloud.google.com/logging/docs/quickstart-sdk",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/logging/v2beta1/",
+		"httpReferenceUrl": "https://cloud.google.com/logging/docs/api/introduction_v2"
+	},
+	{
+		"name": "pubsub",
+		"displayName": "Cloud Pub/Sub",
+		"description": "Google Cloud Pub/Sub brings the scalability, flexibility, and reliability of enterprise message-oriented middleware to the cloud.",
+		"overviewUrl": "https://cloud.google.com/pubsub/overview",
+		"gettingStartedUrl": "https://cloud.google.com/pubsub/prereqs",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/pubsub/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/pubsub/reference/rest/"
+	},
+	{
+		"name": "cloudresourcemanager",
+		"displayName": "Google Cloud Resource Manager",
+		"description": "Google Cloud Platform provides container resources such as Organizations and Projects, that allow you to group and hierarchically organize other Cloud Platform resources.",
+		"overviewUrl": "https://cloud.google.com/resource-manager/",
+		"gettingStartedUrl": "https://cloud.google.com/resource-manager/docs/using-organizations",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/cloudresourcemanager/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/resource-manager/reference/rest/"
+	},
+	{
+		"name": "storage",
+		"displayName": "Google Cloud Storage",
+		"description": "Google Cloud Storage allows world-wide storage and retrieval of any amount of data at any time.",
+		"overviewUrl": "https://cloud.google.com/storage/docs/overview",
+		"gettingStartedUrl": "https://cloud.google.com/storage/docs/signup",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/storage/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/storage/docs/json_api/"
+	},
+	{
+		"name": "translate",
+		"displayName": "Translate",
+		"description": "With Google Translate, you can dynamically translate text between thousands of language pairs.",
+		"overviewUrl": "https://cloud.google.com/translate/docs",
+		"gettingStartedUrl": "https://cloud.google.com/translate/v2/getting_started",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/translate/v2/",
+		"httpReferenceUrl": "https://cloud.google.com/translate/v2/using_rest"
+	},
+	{
+		"name": "vision",
+		"displayName": "Google Cloud Vision",
+		"description": "Cloud Vision API allows developers to easily integrate vision detection features within applications, including image labeling, face and landmark detection, optical character recognition (OCR), and tagging of explicit content.",
+		"overviewUrl": "https://cloud.google.com/vision/docs/",
+		"gettingStartedUrl": "https://cloud.google.com/vision/docs/getting-started",
+		"apiExplorerUrl": "https://developers.google.com/apis-explorer/#p/vision/v1/",
+		"httpReferenceUrl": "https://cloud.google.com/vision/reference/rest/"
+	}
+]

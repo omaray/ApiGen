@@ -1,0 +1,30 @@
+[
+	{
+		"name": "google-api-nodejs-client",
+		"language": "Node.js",
+		"sourceUrl": "https://github.com/google/google-api-nodejs-client",
+		"sampleUrl": "https://github.com/google/google-api-nodejs-client/tree/master/samples",
+		"apiReferenceUrl": "http://google.github.io/google-api-nodejs-client/4.0.0/index.html",
+		"installation": "npm install googleapis --save",
+		"apis":
+		[
+			{
+				"name": "all"
+			}
+		]
+	},
+	{
+		"name": "google-api-python-client",
+		"language": "Python",
+		"sourceUrl": "https://github.com/google/google-api-python-client",
+		"sampleUrl": "https://github.com/google/google-api-python-client/tree/master/samples",
+		"apiReferenceUrl": "",
+		"installation": "pip install --upgrade google-api-python-client",
+		"apis":
+		[
+			{
+				"name": "all"
+			}
+		]
+	}
+]

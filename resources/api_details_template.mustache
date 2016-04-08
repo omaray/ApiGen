@@ -1,20 +1,30 @@
-# {{displayName}}
-{{language}}
+# {{apiDisplayName}}
+{{languageName}}
 
-Learn about using the {{displayName}} API with {{language}}
+Learn about using the {{apiDisplayName}} API with {{languageName}}
 
-{{description}} To learn more about {{displayName}}, see [What is {{displayName}}?]({{overviewUrl}})
+{{apiDescription}} To learn more about {{apiDisplayName}}, see [What is {{apiDisplayName}}?]({{apiOverviewUrl}})
 
-* Read the [getting started guide]({{gettingStartedUrl}}).
-* Learn how to develop using the [{{language}} client library]({{sourceUrl}}).
+* Read the [getting started guide]({{apiGettingStartedUrl}}).
+* Learn how to develop using the [{{languageName}} client library]({{clientLibSourceUrl}}).
+{{#apiExplorerUrl}}
 * Interact with the API in the browser, using [Google APIs Explorer]({{apiExplorerUrl}})
+{{/apiExplorerUrl}}
 
-## Install the {{libName}} library
-To install the {{language}} library, you must use [{{packageManager}}]({{packageManagerUrl}})
+## Install the {{clientLibDisplayName}} library
+To install the {{languageName}} library, you must use [{{languagePackageManager}}]({{languagePackageManagerUrl}})
 
 ```
-{{installation}}
+{{clientLibInstallation}}
 ```
 
 ## Documentation
-* [{{libName}} {{displayName}} reference]({{apiReferenceUrl}})
+{{#clientLibApiReferenceUrl}}
+* [{{apiDisplayName}} reference]({{clientLibApiReferenceUrl}})
+{{/clientLibApiReferenceUrl}}
+{{^clientLibApiReferenceUrl}}
+* [{{apiDisplayName}} reference]({{clientLibGeneralApiReferenceUrl}})
+{{/clientLibApiReferenceUrl}}
+
+## Additional Resources
+* [Client library GitHub repo]({{clientLibSourceUrl}})

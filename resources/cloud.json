@@ -1,103 +1,129 @@
 [
 	{
 		"name": "gcloud-node",
+		"displayName": "Cloud Node",
 		"language": "Node.js",
 		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-node",
 		"sampleUrl": "https://github.com/GoogleCloudPlatform/gcloud-node/tree/master/test",
-		"apiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-node/#/docs/",
+		"generalApiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-node/#/docs/",
 		"installation": "npm install --save gcloud",
 		"apis":
 		[
 			{
-				"name": "bigquery"
+				"name": "bigquery",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/bigquery"
 			},
 			{
-				"name": "compute"
+				"name": "compute",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/compute"
 			},
 			{
-				"name": "dns"
+				"name": "dns",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/dns"
 			},
 			{
-				"name": "datastore"
+				"name": "datastore",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/datastore"
 			},
 			{
-				"name": "logging"
+				"name": "logging",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/logging"
 			},
 			{
-				"name": "pubsub"
+				"name": "pubsub",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/pubsub"
 			},
 			{
-				"name": "cloudresourcemanager"
+				"name": "cloudresourcemanager",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/resource"
 			},
 			{
-				"name": "storage"
+				"name": "storage",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/storage"
 			},
 			{
-				"name": "translate"
+				"name": "translate",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/translate"
 			},
 			{
-				"name": "vision"
+				"name": "vision",
+				"apiReference": "https://googlecloudplatform.github.io/gcloud-node/#/docs/v0.30.2/vision"
 			}
 		]
 	},
 	{
 		"name": "gcloud-python",
+		"displayName": "Cloud Python",
 		"language": "Python",
 		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-python",
 		"sampleUrl": "",
-		"apiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-python/stable/",
+		"generalApiReferenceUrl": "https://googlecloudplatform.github.io/gcloud-python/stable/",
 		"installation": "pip install --upgrade gcloud",
 		"apis":
 		[
 			{
-				"name": "bigquery"
+				"name": "bigquery",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/bigquery-usage.html"
 			},
 			{
-				"name": "datastore"
+				"name": "datastore",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/datastore-client.html"
 			},
 			{
-				"name": "dns"
+				"name": "dns",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/dns-usage.html"
 			},
 			{
-				"name": "logging"
+				"name": "logging",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/logging-usage.html"
 			},
 			{
-				"name": "pubsub"
+				"name": "pubsub",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/pubsub-usage.html"
 			},
 			{
-				"name": "resourcemanager"
+				"name": "cloudresourcemanager",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/resource-manager-api.html"
 			},
 			{
-				"name": "search"
+				"name": "search",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/search-usage.html"
 			},
 			{
-				"name": "storage"
+				"name": "storage",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-python/stable/storage-client.html"
 			}
 		]
 	},
 	{
 		"name": "gcloud-java",
+		"displayName": "Cloud Java",
 		"language": "Java",
 		"sourceUrl": "https://github.com/GoogleCloudPlatform/gcloud-java",
 		"sampleUrl": "https://github.com/GoogleCloudPlatform/gcloud-java/tree/master/gcloud-java-examples",
-		"apiReferenceUrl": "http://googlecloudplatform.github.io/gcloud-java/apidocs",
+		"generalApiReferenceUrl": "http://googlecloudplatform.github.io/gcloud-java/apidocs",
 		"installation": "<dependency><groupId>com.google.gcloud</groupId><artifactId>gcloud-java</artifactId><version>0.1.7</version></dependency>",
 		"apis":
 		[
 			{
-				"name": "bigquery"
+				"name": "bigquery",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-java/0.1.7/apidocs/index.html"
 			},
 			{
-				"name": "datastore"
+				"name": "datastore",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-java/0.1.7/apidocs/index.html"
 			},
 			{
-				"name": "dns"
+				"name": "dns",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-java/0.1.7/apidocs/index.html"
 			},
 			{
-				"name": "resourcemanager"
+				"name": "resourcemanager",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-java/0.1.7/apidocs/index.html"
 			},
 			{
-				"name": "storage"
+				"name": "storage",
+				"apiReference": "http://googlecloudplatform.github.io/gcloud-java/0.1.7/apidocs/index.html"
 			}
 		]
 	}

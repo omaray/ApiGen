@@ -8,6 +8,7 @@ public class Api {
 	private String gettingStartedUrl;
 	private String apiExplorerUrl;
 	private String httpReferenceUrl;
+	private String apiReference;
 	
 	public Api() {}
 	
@@ -37,5 +38,9 @@ public class Api {
 	
 	public String getHttpReferenceUrl() {
 		return this.httpReferenceUrl;
+	}
+	
+	public String getApiReference() {
+		return this.apiReference;
 	}
 }

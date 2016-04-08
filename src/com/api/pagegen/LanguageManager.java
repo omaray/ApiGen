@@ -1,11 +1,8 @@
 package com.api.pagegen;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-
-import com.google.gson.Gson;
 
 public class LanguageManager {
 	private static LanguageManager instance;
@@ -17,14 +14,13 @@ public class LanguageManager {
 		this.languageMap = new HashMap<String, Language>();
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void initializeFromFile() {
-		Gson gson = new Gson();
-		String languagesInJson= Util.readFromFile("./resources/languages.json");
-		Language[] languages = gson.fromJson(languagesInJson, Language[].class);
+		// Load language data from json file
+		LanguageDataFileLoader languageLoader = new LanguageDataFileLoader();
+		this.languageList = (LinkedList<Language>)languageLoader.loadData();
 		
-		this.languageList = new LinkedList<Language>(Arrays.asList(languages));
-		
-		for (Language language : languages) {
+		for (Language language : this.languageList) {
 			this.languageMap.put(language.getName(), language);
 		}
 	}

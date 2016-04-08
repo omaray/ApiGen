@@ -1,10 +1,7 @@
 package com.api.pagegen;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
-
-import com.google.gson.Gson;
 
 public class ClientLibraryManager {
 	private static ClientLibraryManager instance;
@@ -13,7 +10,6 @@ public class ClientLibraryManager {
 	private HashMap<String, HashMap<String, ClientLibrary>> cloudClientLibMap;
 	private HashMap<String, HashMap<String, ClientLibrary>> apiaryClientLibMap;
 	
-	
 	private ClientLibraryManager() {
 		this.cloudClientLibList = new LinkedList<ClientLibrary>();
 		this.apiaryClientLibList = new LinkedList<ClientLibrary>();
@@ -21,7 +17,7 @@ public class ClientLibraryManager {
 		this.apiaryClientLibMap = new HashMap<String, HashMap<String, ClientLibrary>>();
 	}
 	
-	private void populateMap(ClientLibrary[] clientLibs, 
+	private void populateMap(LinkedList<ClientLibrary> clientLibs, 
 			HashMap<String, HashMap<String, ClientLibrary>> languageToClientLibMap) {
 		
 		for (ClientLibrary clientLib : clientLibs) {
@@ -53,36 +49,39 @@ public class ClientLibraryManager {
 		}
 	}
 
-	private void initializeFromFile() {
-		Gson gson = new Gson();
-		String cloudLibsInJson= Util.readFromFile("./resources/cloud.json");
-		String apiaryLibsInJson= Util.readFromFile("./resources/apiary.json");
+	private void initialize() {
 		
-		ClientLibrary[] cloudClientLibs = gson.fromJson(cloudLibsInJson, ClientLibrary[].class);
-		ClientLibrary[] apiaryClientLibs = gson.fromJson(apiaryLibsInJson, ClientLibrary[].class);
+		// Load client library data from json file
+		ClientLibraryDataFileLoader clientLibLoader = new ClientLibraryDataFileLoader();
+		ClientLibraryDataFileLoader.ClientLibraries clientLibs = 
+				(ClientLibraryDataFileLoader.ClientLibraries)clientLibLoader.loadData();
 		
-		this.cloudClientLibList = new LinkedList<ClientLibrary>(Arrays.asList(cloudClientLibs));
-		this.apiaryClientLibList = new LinkedList<ClientLibrary>(Arrays.asList(apiaryClientLibs));
+		this.cloudClientLibList = clientLibs.cloudClientLibList;
+		this.apiaryClientLibList = clientLibs.apiaryClientLibList;
 		
-		populateMap(cloudClientLibs, this.cloudClientLibMap);
-		populateMap(apiaryClientLibs, this.apiaryClientLibMap);
+		populateMap(this.cloudClientLibList, this.cloudClientLibMap);
+		populateMap(this.apiaryClientLibList, this.apiaryClientLibMap);
 	}
 	
 	public static ClientLibraryManager getInstance() {
 		if (instance == null)
 		{
 			instance = new ClientLibraryManager();
-			instance.initializeFromFile();
+			instance.initialize();
 		}
 		
 		return instance;
 	}
 	
 	public ClientLibrary getClientLibrary(String languageName, String apiName) {
+		
+		// Try cloud library first
 		HashMap<String, ClientLibrary> apiToClientLib = this.cloudClientLibMap.get(languageName);
 		if (apiToClientLib.containsKey(apiName)) {
 			return apiToClientLib.get(apiName);
 		} else {
+			
+			// Otherwise revert to apiary client library
 			apiToClientLib = this.apiaryClientLibMap.get(languageName);
 			return apiToClientLib.get(apiName);
 		}
@@ -120,7 +119,7 @@ public class ClientLibraryManager {
 			System.out.println("Language:     " + clientLib.getLanguage());
 			System.out.println("Source:       " + clientLib.getSourceUrl());
 			System.out.println("Sample:       " + clientLib.getSampleUrl());
-			System.out.println("Api Ref:      " + clientLib.getApiReferenceUrl());
+			System.out.println("Api Ref:      " + clientLib.getGeneralApiReferenceUrl());
 			System.out.println("Installation: " + clientLib.getInstallation());
 			for (Api api : clientLib.getApis()) {
 				System.out.println("    api: " + api.getName());

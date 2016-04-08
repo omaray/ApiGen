@@ -1,11 +1,8 @@
 package com.api.pagegen;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-
-import com.google.gson.Gson;
 
 public class ApiManager {
 	private static ApiManager instance;
@@ -17,14 +14,13 @@ public class ApiManager {
 		this.apiMap = new HashMap<String, Api>();
 	}
 	
-	private void initializeFromFile() {
-		Gson gson = new Gson();
-		String apisInJson= Util.readFromFile("./resources/apis.json");
-		Api[] apis = gson.fromJson(apisInJson, Api[].class);
+	@SuppressWarnings("unchecked")
+	private void initialize() {
+		// Load api data from json file
+		ApiDataFileLoader apiLoader = new ApiDataFileLoader();
+		this.apiList = (LinkedList<Api>)apiLoader.loadData();
 		
-		this.apiList = new LinkedList<Api>(Arrays.asList(apis));
-		
-		for (Api api : apis) {
+		for (Api api : this.apiList) {
 			this.apiMap.put(api.getName(), api);
 		}
 	}
@@ -33,7 +29,7 @@ public class ApiManager {
 		if (instance == null)
 		{
 			instance = new ApiManager();
-			instance.initializeFromFile();
+			instance.initialize();
 		}
 		
 		return instance;

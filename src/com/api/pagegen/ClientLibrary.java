@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class ClientLibrary {
 	private String name;
+	private String displayName;
 	private String language;
 	private String sourceUrl;
 	private String sampleUrl;
-	private String apiReferenceUrl;
+	private String generalApiReferenceUrl;
 	private String installation;
 	ArrayList<Api> apis;
 	
@@ -15,6 +16,10 @@ public class ClientLibrary {
 	
 	public String getName() {
 		return this.name;
+	}
+	
+	public String getDisplayName() {
+		return this.displayName;
 	}
 	
 	public String getLanguage() {
@@ -29,8 +34,8 @@ public class ClientLibrary {
 		return this.sampleUrl;
 	}
 	
-	public String getApiReferenceUrl() {
-		return this.apiReferenceUrl;
+	public String getGeneralApiReferenceUrl() {
+		return this.generalApiReferenceUrl;
 	}
 	
 	public String getInstallation() {
@@ -39,5 +44,15 @@ public class ClientLibrary {
 	
 	public ArrayList<Api> getApis() {
 		return this.apis;
+	}
+	
+	public String getApiReferenceUrl(String apiName) {
+		for (Api api : this.apis) {
+			if (api.getName().equals(apiName)) {
+				return api.getApiReference();
+			}
+		}
+		
+		return null;
 	}
 }

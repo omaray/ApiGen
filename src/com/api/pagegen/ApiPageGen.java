@@ -1,5 +1,13 @@
 package com.api.pagegen;
 
+import com.api.pagegen.manager.ApiManager;
+import com.api.pagegen.manager.ClientLibraryManager;
+import com.api.pagegen.manager.LanguageManager;
+import com.api.pagegen.manager.MarkdownManager;
+import com.api.pagegen.model.Api;
+import com.api.pagegen.model.ClientLibrary;
+import com.api.pagegen.model.Language;
+
 public class ApiPageGen {
 	private ApiManager apiManager;
 	private LanguageManager languageManager;

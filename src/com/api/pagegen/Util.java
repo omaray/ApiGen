@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class Util {
 
     private static final Logger logger = Logger.getLogger(Util.class.getName());
-	
+    
     // Read the content from the specified file
     public static String readFromFile(String fileName) {
         String line = null;

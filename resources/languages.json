@@ -1,37 +1,37 @@
 [
-	{
-		"name": "Node.js",
-		"packageManager": "npm",
-		"packageManagerUrl": "https://www.npmjs.com/"
-	},
-	{
-		"name": "Python",
-		"packageManager": "pypi",
-		"packageManagerUrl": "https://pypi.python.org/pypi"
-	},
-	{
-		"name": "Java",
-		"packageManager": "mvn",
-		"packageManagerUrl": "http://search.maven.org/"
-	},
-	{
-		"name": "Ruby",
-		"packageManager": "rubygems",
-		"packageManagerUrl": "https://rubygems.org/"
-	},
-	{
-		"name": "Go",
-		"packageManager": "go",
-		"packageManagerUrl": "https://golang.org/cmd/go/"
-	},
-	{
-		"name": ".NET",
-		"packageManager": "nuget",
-		"packageManagerUrl": "https://www.nuget.org/"
-	},
-	{
-		"name": "PHP",
-		"packageManager": "composer",
-		"packageManagerUrl": "https://getcomposer.org/"
-	}
+    {
+        "name": "Node.js",
+        "packageManager": "npm",
+        "packageManagerUrl": "https://www.npmjs.com/"
+    },
+    {
+        "name": "Python",
+        "packageManager": "pypi",
+        "packageManagerUrl": "https://pypi.python.org/pypi"
+    },
+    {
+        "name": "Java",
+        "packageManager": "mvn",
+        "packageManagerUrl": "http://search.maven.org/"
+    },
+    {
+        "name": "Ruby",
+        "packageManager": "rubygems",
+        "packageManagerUrl": "https://rubygems.org/"
+    },
+    {
+        "name": "Go",
+        "packageManager": "go",
+        "packageManagerUrl": "https://golang.org/cmd/go/"
+    },
+    {
+        "name": ".NET",
+        "packageManager": "nuget",
+        "packageManagerUrl": "https://www.nuget.org/"
+    },
+    {
+        "name": "PHP",
+        "packageManager": "composer",
+        "packageManagerUrl": "https://getcomposer.org/"
+    }
 ]

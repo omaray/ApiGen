@@ -4,6 +4,7 @@ public class Api {
     private String name;
     private String displayName;
     private String description;
+    private String category;
     private String overviewUrl;
     private String gettingStartedUrl;
     private String apiExplorerUrl;
@@ -24,6 +25,10 @@ public class Api {
         return this.description;
     }
     
+    public String getCategory() {
+        return this.category;
+    }
+
     public String getOverviewUrl() {
         return this.overviewUrl;
     }

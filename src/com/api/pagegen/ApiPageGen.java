@@ -23,7 +23,6 @@ public class ApiPageGen {
     
     public void generateApiPages() throws Exception{
         this.generateApiPagesHelper("Node.js");
-        this.generateApiPagesHelper("Python");
     }
     
     private void generateApiPagesHelper(String languageName) throws Exception {

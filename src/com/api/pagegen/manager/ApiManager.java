@@ -54,6 +54,7 @@ public class ApiManager {
             System.out.println("Api Name:        " + api.getName());
             System.out.println("Display Name:    " + api.getDisplayName());
             System.out.println("Description:     " + api.getDescription());
+            System.out.println("Category:        " + api.getCategory());
             System.out.println("Overview:        " + api.getOverviewUrl());
             System.out.println("Getting Started: " + api.getGettingStartedUrl());
             System.out.println("Api Explorer:    " + api.getApiExplorerUrl());

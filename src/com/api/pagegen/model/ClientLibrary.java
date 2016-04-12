@@ -3,16 +3,20 @@ package com.api.pagegen.model;
 import java.util.ArrayList;
 
 public class ClientLibrary {
-    private String name;
-    private String displayName;
-    private String language;
-    private String sourceUrl;
-    private String sampleUrl;
-    private String generalApiReferenceUrl;
-    private String installation;
+    String name;
+    String displayName;
+    String language;
+    String sourceUrl;
+    String sampleUrl;
+    String generalApiReferenceUrl;
+    String installation;
     ArrayList<Api> apis;
     
     public ClientLibrary() {}
+    
+    public ClientLibrary(String name) {
+        this.name = name;
+    }
     
     public String getName() {
         return this.name;

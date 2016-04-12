@@ -28,6 +28,18 @@ public class Constants {
     public static final String CLIENT_LIB_API_REFERENCE_URL = "clientLibApiReferenceUrl";
     public static final String CLIENT_LIB_GENERAL_API_REFERENCE_URL = "clientLibGeneralApiReferenceUrl";
     
+    // Landing page related constants for markdown
+    public static final String CATEGORIES = "categories";
+    
+    // Api details page url related constants
+    public static final String DETAILS_BASE_URL = "https://github.com/rok987/ApiGen/tree/master/out/";
+    public static final String DETAILS_FILE_NAME = "%s_%s_details_page.md";
+    
     // Templates
     public static final String API_PAGE_TEMPLATE = "./resources/api_details_template.mustache";
+    public static final String API_LANDING_TEMPLATE = "./resources/api_landing_template.mustache";
+    
+    // Api Categories
+    public static String[] API_CATEGORIES = 
+        {"Compute", "Storage", "Networking", "Big Data", "Machine Learning", "Operations", "Tools"};
 }

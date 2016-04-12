@@ -3,9 +3,11 @@ package com.api.pagegen.manager;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 
 import com.api.pagegen.Constants;
 import com.api.pagegen.model.Api;
+import com.api.pagegen.model.Category;
 import com.api.pagegen.model.ClientLibrary;
 import com.api.pagegen.model.Language;
 import com.github.mustachejava.DefaultMustacheFactory;
@@ -48,7 +50,20 @@ public class MarkdownManager {
         MustacheFactory mf = new DefaultMustacheFactory();
         Mustache mustache = mf.compile(Constants.API_PAGE_TEMPLATE);
         
-        String fileName = language.getName() + "_" + api.getName() + "_details_page.md";
+        String fileName = String.format(Constants.DETAILS_FILE_NAME, language.getName(), api.getName());
+        File file = new File("./out/" + language.getName() + "/" + fileName);
+        mustache.execute(new PrintWriter(file), scopes).flush();
+    }
+    
+    public void generateApiLandingPage(Language language, List<Category> categories) throws Exception {
+        HashMap<String, Object> scopes = new HashMap<String, Object>();
+        scopes.put(Constants.LANGUAGE_NAME, language.getName());
+        scopes.put(Constants.CATEGORIES, categories);
+        
+        MustacheFactory mf = new DefaultMustacheFactory();
+        Mustache mustache = mf.compile(Constants.API_LANDING_TEMPLATE);
+        
+        String fileName = "ApiLanding.md";
         File file = new File("./out/" + language.getName() + "/" + fileName);
         mustache.execute(new PrintWriter(file), scopes).flush();
     }

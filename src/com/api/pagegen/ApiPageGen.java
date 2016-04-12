@@ -1,10 +1,13 @@
 package com.api.pagegen;
 
+import java.util.List;
+
 import com.api.pagegen.manager.ApiManager;
 import com.api.pagegen.manager.ClientLibraryManager;
 import com.api.pagegen.manager.LanguageManager;
 import com.api.pagegen.manager.MarkdownManager;
 import com.api.pagegen.model.Api;
+import com.api.pagegen.model.Category;
 import com.api.pagegen.model.ClientLibrary;
 import com.api.pagegen.model.Language;
 
@@ -22,10 +25,18 @@ public class ApiPageGen {
     }
     
     public void generateApiPages() throws Exception{
-        this.generateApiPagesHelper("Node.js");
+        this.generateApiLandingPage("Node.js");
+        this.generateApiDetailsPages("Node.js");
     }
     
-    private void generateApiPagesHelper(String languageName) throws Exception {
+    private void generateApiLandingPage(String languageName) throws Exception {
+        Language language = this.languageManager.getLanguageDefinition(languageName);
+        this.apiManager.setApiDetailsUrl(language);
+        List<Category> categories = this.apiManager.getCategories();
+        markdownManager.generateApiLandingPage(language, categories);
+    }
+    
+    private void generateApiDetailsPages(String languageName) throws Exception {
         Language language = this.languageManager.getLanguageDefinition(languageName);
         for (Api api : apiManager.getAllApiDefinitions()) {
             ClientLibrary clientLib = clientLibManager.getClientLibrary(language.getName(), api.getName());

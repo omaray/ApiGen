@@ -1,11 +1,15 @@
 package com.api.pagegen.model;
 
 public class Language {
-    private String name;
-    private String packageManager;
-    private String packageManagerUrl;
+    String name;
+    String packageManager;
+    String packageManagerUrl;
     
     public Language() {}
+    
+    public Language(String name) {
+        this.name = name;
+    }
     
     public String getName() {
         return this.name;

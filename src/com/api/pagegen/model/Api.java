@@ -1,17 +1,22 @@
 package com.api.pagegen.model;
 
 public class Api {
-    private String name;
-    private String displayName;
-    private String description;
-    private String category;
-    private String overviewUrl;
-    private String gettingStartedUrl;
-    private String apiExplorerUrl;
-    private String httpReferenceUrl;
-    private String apiReference;
+    String name;
+    String displayName;
+    String description;
+    String categoryName;
+    String overviewUrl;
+    String gettingStartedUrl;
+    String apiExplorerUrl;
+    String httpReferenceUrl;
+    String apiDetailsUrl;
+    String apiReference;
     
     public Api() {}
+    
+    public Api(String name) {
+        this.name = name;
+    }
     
     public String getName() {
         return this.name;
@@ -25,8 +30,8 @@ public class Api {
         return this.description;
     }
     
-    public String getCategory() {
-        return this.category;
+    public String getCategoryName() {
+        return this.categoryName;
     }
 
     public String getOverviewUrl() {
@@ -43,6 +48,14 @@ public class Api {
     
     public String getHttpReferenceUrl() {
         return this.httpReferenceUrl;
+    }
+    
+    public String getApiDetailsUrl() {
+        return this.apiDetailsUrl;
+    }
+    
+    public void setApiDetailsUrl(String apiDetailsUrl) {
+        this.apiDetailsUrl = apiDetailsUrl;
     }
     
     public String getApiReference() {

@@ -18,7 +18,7 @@ public class LanguageManager {
     }
     
     @SuppressWarnings("unchecked")
-    private void initializeFromFile() {
+    private void initialize() {
         // Load language data from json file
         LanguageDataFileLoader languageLoader = new LanguageDataFileLoader();
         this.languageList = (LinkedList<Language>)languageLoader.loadData();
@@ -32,7 +32,7 @@ public class LanguageManager {
         if (instance == null)
         {
             instance = new LanguageManager();
-            instance.initializeFromFile();
+            instance.initialize();
         }
         
         return instance;

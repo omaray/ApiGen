@@ -1,0 +1,19 @@
+{{#categories}}
+<div class="card" id="{{name}}">
+  <header>
+    <h2>{{name}}</h2>
+  </header>
+  <ul class="card-showcase">
+
+{{#apis}}
+{% setvar lp_title %}{{displayName}} API{% endsetvar %}
+{% setvar lp_link %}apis/{{name}}{% endsetvar %}
+{% setvar lp_desc %}
+{{displayName}} API
+{% endsetvar %}
+{% include "_shared/templates/_landing_page_card.html" %}
+{{/apis}}
+
+  </ul>
+</div>
+{{/categories}}

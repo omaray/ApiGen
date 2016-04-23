@@ -34,10 +34,13 @@ public class Constants {
     // Api details page url related constants
     public static final String DETAILS_BASE_URL = "https://github.com/rok987/ApiGen/tree/master/out/";
     public static final String DETAILS_FILE_NAME = "%s_%s_details_page.md";
+    public static final String DETAILS_VARIABLES_FILE_NAME = "%s_%s_variables_details_page.md";
     
     // Templates
     public static final String API_PAGE_TEMPLATE = "./resources/api_details_template.mustache";
+    public static final String API_VARIABLE_PAGE_TEMPLATE = "./resources/api_details_variables_template.mustache";
     public static final String API_LANDING_TEMPLATE = "./resources/api_landing_template.mustache";
+    public static final String API_LANDING_CLOUD_TEMPLATE = "./resources/api_landing_cloud_template.mustache";
     
     // Api Categories
     public static String[] API_CATEGORIES = 

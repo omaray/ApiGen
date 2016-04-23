@@ -67,4 +67,45 @@ public class MarkdownManager {
         File file = new File("./out/" + language.getName() + "/" + fileName);
         mustache.execute(new PrintWriter(file), scopes).flush();
     }
+    
+    public void generateApiDetailsVariablesPage(Language language, Api api, ClientLibrary clientLib) throws Exception {
+        HashMap<String, Object> scopes = new HashMap<String, Object>();
+        scopes.put(Constants.API_DISPLAY_NAME, api.getDisplayName());
+        scopes.put(Constants.API_DESCRIPTION, api.getDescription());
+        scopes.put(Constants.API_OVERVIEW_URL, api.getOverviewUrl());
+        scopes.put(Constants.API_GETTING_STARTED_URL, api.getGettingStartedUrl());
+        scopes.put(Constants.API_EXPLORER_URL, api.getApiExplorerUrl());
+        scopes.put(Constants.API_HTTP_REFERENCE_URL, api.getHttpReferenceUrl());
+        
+        scopes.put(Constants.LANGUAGE_NAME, language.getName());
+        scopes.put(Constants.LANGUAGE_PACKAGE_MANAGER, language.getPackageManager());
+        scopes.put(Constants.LANGUAGE_PACKAGE_MANAGER_URL, language.getPackageManagerUrl());
+        
+        scopes.put(Constants.CLIENT_LIB_SOURCE_URL, clientLib.getSourceUrl());
+        scopes.put(Constants.CLIENT_LIB_DISPLAY_NAME, clientLib.getDisplayName());
+        scopes.put(Constants.CLIENT_LIB_INSTALLATION, clientLib.getInstallation());
+        scopes.put(Constants.CLIENT_LIB_API_REFERENCE_URL, clientLib.getApiReferenceUrl(api.getName()));
+        scopes.put(Constants.CLIENT_LIB_GENERAL_API_REFERENCE_URL, clientLib.getGeneralApiReferenceUrl());
+        
+        MustacheFactory mf = new DefaultMustacheFactory();
+        Mustache mustache = mf.compile(Constants.API_VARIABLE_PAGE_TEMPLATE);
+        
+        //String fileName = String.format(Constants.DETAILS_VARIABLES_FILE_NAME, language.getName(), api.getName());
+        String fileName = api.getName() + ".md";
+        File file = new File("./out/" + language.getName() + "/variables/" + fileName);
+        mustache.execute(new PrintWriter(file), scopes).flush();
+    }
+    
+    public void generateApiLandingCloudPage(Language language, List<Category> categories) throws Exception {
+        HashMap<String, Object> scopes = new HashMap<String, Object>();
+        scopes.put(Constants.LANGUAGE_NAME, language.getName());
+        scopes.put(Constants.CATEGORIES, categories);
+        
+        MustacheFactory mf = new DefaultMustacheFactory();
+        Mustache mustache = mf.compile(Constants.API_LANDING_CLOUD_TEMPLATE);
+        
+        String fileName = "ApiLandingCloud.md";
+        File file = new File("./out/" + language.getName() + "/variables/" + fileName);
+        mustache.execute(new PrintWriter(file), scopes).flush();
+    }
 }

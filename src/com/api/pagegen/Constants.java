@@ -5,7 +5,7 @@ public class Constants {
     // Path to json data files
     public static final String APIS_JSON_PATH = "./resources/data/apis.json";
     public static final String CLOUD_JSON_PATH = "./resources/data/cloud.json";
-    public static final String APIARY_JSON_PATH = "./resources/apiary.json";
+    public static final String APIARY_JSON_PATH = "./resources/data/apiary.json";
     public static final String LANGUAGES_JSON_PATH = "./resources/data/languages.json";
     
     // Api related constants for markdown
